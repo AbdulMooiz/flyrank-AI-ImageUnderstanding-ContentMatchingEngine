@@ -1,0 +1,24 @@
+project: ai-image-understanding-content-matching-engine
+
+run:
+  api: "uvicorn app.main:app --host 0.0.0.0 --port 8000"
+  worker: "python -m app.worker run"
+  db: "docker compose up -d db"
+  seed: "python -m scripts.seed_data"
+  eval: "python -m scripts.evaluate"
+
+test:
+  unit: "pytest tests/unit -q"
+  integration: "pytest tests/integration -q"
+  all: "pytest -q"
+
+base_url: "http://localhost:8000"
+endpoints:
+  health: "/health"
+  posts: "/posts"
+  post_images: "/posts/{post_id}/images"
+  approve: "/suggestions/{suggestion_id}/approve"
+  reject: "/suggestions/{suggestion_id}/reject"
+  jobs_process: "/jobs/images/process"
+  job_status: "/jobs/{job_id}"
+  costs: "/costs"

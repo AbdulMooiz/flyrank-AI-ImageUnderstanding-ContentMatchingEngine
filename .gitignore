@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.venv/
+venv/
+.env
+.env.*
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+
+# Build / logs
+*.log
+logs/
+*.sqlite3
+*.db
+build/
+dist/
+*.egg-info/
+
+# Generated or local data
+data/corpus/downloads/
+data/corpus/**/*.jpg
+data/corpus/**/*.jpeg
+data/corpus/**/*.png
+
+# OS
+.DS_Store
+Thumbs.db
