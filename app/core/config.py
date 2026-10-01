@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     app_name: str = "ai-image-matching-engine"
     app_env: str = "development"
     app_debug: bool = True
-    database_url: str = "postgresql+psycopg://postgres:postgres@localhost:5432/app"
+    database_url: str = "postgresql+psycopg://postgres:postgres@db:5432/app"
     database_echo: bool = False
     gemini_api_key: str = ""
     gemini_vision_model: str = "gemini-1.5-flash"
